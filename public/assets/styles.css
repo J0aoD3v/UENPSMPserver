@@ -1,0 +1,66 @@
+/* Fonte base */
+:root {
+  --bg: #0f1420;
+  --bg-2: #121826;
+  --text: #e7ecf3;
+  --muted: #b6c2d0;
+  --primary: #4ade80; /* verde */
+  --secondary: #60a5fa; /* azul */
+  --card: #1b2436;
+  --border: #27324a;
+}
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+body {
+  font-family: "Poppins", system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+.container { width: min(1100px, 92%); margin: 0 auto; }
+
+/* Hero */
+.hero {
+  position: relative;
+  min-height: 78vh;
+  background: url('https://images.unsplash.com/photo-1619682288462-40eead0a57fb?q=80&w=2000&auto=format&fit=crop') center/cover no-repeat;
+  display: grid;
+  align-content: start;
+}
+.hero .overlay {
+  position: absolute; inset: 0; background: linear-gradient(180deg, rgba(15,20,32,.6), rgba(15,20,32,.9));
+}
+.nav {
+  position: relative; z-index: 1; padding: 18px 0; display: flex; align-items: center; justify-content: space-between;
+}
+.brand { font-weight: 800; letter-spacing: .5px; }
+.btn { display: inline-block; padding: 10px 16px; border-radius: 10px; text-decoration: none; font-weight: 600; transition: .2s; }
+.btn-primary { background: var(--primary); color: #0b0f17; }
+.btn-primary:hover { filter: brightness(1.05); transform: translateY(-1px); }
+.btn-secondary { background: transparent; color: var(--text); border: 1px solid var(--border); }
+.btn-secondary:hover { border-color: var(--text); transform: translateY(-1px); }
+.hero-content { position: relative; z-index: 1; padding-top: 60px; }
+.hero h1 { font-size: clamp(32px, 4.5vw, 56px); margin: 10px 0; }
+.hero p { max-width: 800px; color: var(--muted); margin-bottom: 18px; }
+.cta { display: flex; gap: 12px; }
+
+/* Sections */
+section { padding: 56px 0; }
+section h2 { font-size: 28px; margin-bottom: 22px; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+.card { background: var(--card); border: 1px solid var(--border); border-radius: 14px; padding: 18px; }
+
+/* How to */
+.howto ol { padding-left: 18px; }
+.howto a { color: var(--secondary); }
+
+/* Join */
+.join-grid .card code { background: #0b0f17; padding: 3px 6px; border-radius: 6px; }
+
+/* Footer */
+.footer { border-top: 1px solid var(--border); background: var(--bg-2); padding: 22px 0; color: var(--muted); font-size: 14px; }
+
+/* Responsive tweaks */
+@media (max-width: 640px) {
+  .cta { flex-direction: column; }
+}
