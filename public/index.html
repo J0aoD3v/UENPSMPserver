@@ -14,19 +14,37 @@
     <meta property="og:type" content="website" />
     <meta property="og:locale" content="pt_BR" />
     <meta property="og:site_name" content="UENP SMP" />
-    <meta property="og:title" content="UENP SMP – Servidor Universitário de Minecraft" />
-    <meta property="og:description" content="Servidor universitário UENP SMP (1.7 a 1.21.8). Entre no Discord e jogue com a galera." />
+    <meta
+      property="og:title"
+      content="UENP SMP – Servidor Universitário de Minecraft"
+    />
+    <meta
+      property="og:description"
+      content="Servidor universitário UENP SMP (1.7 a 1.21.8). Entre no Discord e jogue com a galera."
+    />
     <meta property="og:url" content="https://www.uenpsmp.games/" />
-    <meta property="og:image" content="https://www.uenpsmp.games/assets/og-banner.png" />
+    <meta
+      property="og:image"
+      content="https://www.uenpsmp.games/assets/og-banner.png"
+    />
     <meta property="og:image:width" content="1200" />
     <meta property="og:image:height" content="630" />
     <meta property="og:image:alt" content="Banner do servidor UENP SMP" />
 
     <!-- Twitter Cards -->
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="UENP SMP – Servidor Universitário de Minecraft" />
-    <meta name="twitter:description" content="Servidor universitário UENP SMP (1.7 a 1.21.8). Entre no Discord e jogue com a galera." />
-    <meta name="twitter:image" content="https://www.uenpsmp.games/assets/og-banner.png" />
+    <meta
+      name="twitter:title"
+      content="UENP SMP – Servidor Universitário de Minecraft"
+    />
+    <meta
+      name="twitter:description"
+      content="Servidor universitário UENP SMP (1.7 a 1.21.8). Entre no Discord e jogue com a galera."
+    />
+    <meta
+      name="twitter:image"
+      content="https://www.uenpsmp.games/assets/og-banner.png"
+    />
 
     <title>UENP SMP – Servidor Universitário de Minecraft</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -37,10 +55,19 @@
     />
 
     <!-- Favicons -->
-    <link rel="apple-touch-icon" sizes="180x180" href="/assets/favicon/apple-touch-icon.png" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
     <link rel="icon" href="/assets/favicon/favicon.ico" sizes="any" />
     <link rel="icon" href="/assets/favicon/favicon.svg" type="image/svg+xml" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/assets/favicon/favicon-96x96.png" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="96x96"
+      href="/assets/favicon/favicon-96x96.png"
+    />
     <link rel="manifest" href="/assets/favicon/site.webmanifest" />
     <meta name="application-name" content="UENP SMP" />
     <meta name="apple-mobile-web-app-title" content="UENP SMP" />
@@ -66,7 +93,7 @@
         <div class="cta">
           <a
             class="btn btn-primary"
-            href="https://discord.gg/G5DchyrmNK"
+            href="https://discord.gg/wyYK9gQMDq"
             target="_blank"
             rel="noopener"
             >Entrar no Discord</a
@@ -110,7 +137,7 @@
           <li>
             Entre no nosso
             <a
-              href="https://discord.gg/G5DchyrmNK"
+              href="https://discord.gg/wyYK9gQMDq"
               target="_blank"
               rel="noopener"
               >Discord oficial</a
@@ -146,12 +173,8 @@
           <div class="card">
             <h3>Endereço do servidor</h3>
             <div class="server-ip">
-              <code>play.uenpsmp.games</code>
-              <button
-                class="copy-btn"
-                onclick="copyToClipboard('play.uenpsmp.games')"
-                title="Copiar IP"
-              >
+              <code id="server-ip-display"></code>
+              <button id="copy-ip-btn" class="copy-btn" title="Copiar IP">
                 📋 Copiar
               </button>
             </div>

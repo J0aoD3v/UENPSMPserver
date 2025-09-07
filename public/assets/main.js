@@ -1,8 +1,34 @@
+// Configurações centralizadas
+const CONFIG = {
+  DISCORD_URL: "https://discord.gg/wyYK9gQMDq",
+  SERVER_IP: "play.uenpsmp.games",
+};
+
 // Atualiza ano no footer
 const yearEl = document.getElementById("year");
 if (yearEl) {
   yearEl.textContent = new Date().getFullYear();
 }
+
+// Popula links do Discord e IP do servidor
+document.addEventListener("DOMContentLoaded", function () {
+  // Atualiza todos os links do Discord
+  document.querySelectorAll("[data-discord-link]").forEach((link) => {
+    link.href = CONFIG.DISCORD_URL;
+  });
+
+  // Atualiza o IP do servidor
+  const serverIpEl = document.getElementById("server-ip-display");
+  if (serverIpEl) {
+    serverIpEl.textContent = CONFIG.SERVER_IP;
+  }
+
+  // Atualiza o botão de cópia para usar o IP correto
+  const copyBtn = document.getElementById("copy-ip-btn");
+  if (copyBtn) {
+    copyBtn.onclick = () => copyToClipboard(CONFIG.SERVER_IP);
+  }
+});
 
 // Smooth scroll simples para âncoras
 document.querySelectorAll('a[href^="#"]').forEach((a) => {
